@@ -9,6 +9,8 @@ using PlatformView = UIKit.UIWindow;
 using PlatformView = Android.App.Activity;
 #elif WINDOWS
 using PlatformView = Microsoft.UI.Xaml.Window;
+#elif WEB
+using PlatformView = Microsoft.AspNetCore.Components.ComponentBase;
 #endif
 
 namespace Microsoft.Maui.Platform

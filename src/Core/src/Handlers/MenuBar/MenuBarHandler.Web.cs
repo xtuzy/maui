@@ -2,9 +2,9 @@
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class MenuBarHandler : ElementHandler<IMenuBar, object>, IMenuBarHandler
+	public partial class MenuBarHandler : ElementHandler<IMenuBar, Microsoft.AspNetCore.Components.ComponentBase>, IMenuBarHandler
 	{
-		protected override object CreatePlatformElement()
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformElement()
 		{
 			throw new NotImplementedException();
 		}

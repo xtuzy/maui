@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class SwipeItemMenuItemHandler : ElementHandler<ISwipeItemMenuItem, object>
+	public partial class SwipeItemMenuItemHandler : ElementHandler<ISwipeItemMenuItem, Microsoft.AspNetCore.Components.ComponentBase>
 	{
-		protected override object CreatePlatformElement()
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformElement()
 		{
 			throw new NotImplementedException();
 		}

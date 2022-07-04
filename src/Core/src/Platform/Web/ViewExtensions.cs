@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 
 using PlatformView = Microsoft.AspNetCore.Components.ComponentBase;
@@ -80,5 +81,19 @@ namespace Microsoft.Maui.Platform
 			=> null;
 
 		public static void UpdateInputTransparent(this PlatformView nativeView, IViewHandler handler, IView view) { }
+
+		public static void UpdateBackgroundLayerFrame(this PlatformView view)
+		{
+		}
+
+		internal static IDisposable OnUnloaded(this PlatformView uiView, Action action)
+		{
+			throw new NotImplementedException();
+		}
+
+		internal static IDisposable OnLoaded(this PlatformView uiView, Action action)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

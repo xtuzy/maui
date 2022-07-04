@@ -13,6 +13,8 @@ using PlatformView = Microsoft.UI.Xaml.FrameworkElement;
 using ElmSharp;
 using ElmSharp.Accessible;
 using PlatformView = ElmSharp.EvasObject;
+#elif WEB
+using PlatformView = Microsoft.AspNetCore.Components.ComponentBase;
 #elif (NETSTANDARD || !PLATFORM)
 using PlatformView = System.Object;
 #endif
