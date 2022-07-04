@@ -2,9 +2,9 @@
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class EditorHandler : ViewHandler<IEditor, object>
+	public partial class EditorHandler : ViewHandler<IEditor, Microsoft.AspNetCore.Components.ComponentBase>
 	{
-		protected override object CreatePlatformView() => throw new NotImplementedException();
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView() => throw new NotImplementedException();
 
 		public static void MapText(IViewHandler handler, IEditor editor) { }
 		public static void MapTextColor(IViewHandler handler, IEditor editor) { }

@@ -2,9 +2,9 @@
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class SearchBarHandler : ViewHandler<ISearchBar, object>
+	public partial class SearchBarHandler : ViewHandler<ISearchBar, Microsoft.AspNetCore.Components.ComponentBase>
 	{
-		protected override object CreatePlatformView() => throw new NotImplementedException();
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView() => throw new NotImplementedException();
 
 		public object? QueryEditor => throw new NotImplementedException();
 

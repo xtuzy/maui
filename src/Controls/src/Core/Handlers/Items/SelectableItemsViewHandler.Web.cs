@@ -7,7 +7,7 @@ namespace Microsoft.Maui.Controls.Handlers.Items
 {
 	public partial class SelectableItemsViewHandler<TItemsView> : StructuredItemsViewHandler<TItemsView> where TItemsView : SelectableItemsView
 	{
-		protected override object CreatePlatformView()
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView()
 		{
 			throw new NotImplementedException();
 		}

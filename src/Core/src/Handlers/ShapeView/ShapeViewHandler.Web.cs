@@ -3,9 +3,9 @@ using Microsoft.Maui.Graphics;
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class ShapeViewHandler : ViewHandler<IShapeView, object>
+	public partial class ShapeViewHandler : ViewHandler<IShapeView, Microsoft.AspNetCore.Components.ComponentBase>
 	{
-		protected override object CreatePlatformView() => throw new NotImplementedException();
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView() => throw new NotImplementedException();
 
 		public static void MapBackground(IShapeViewHandler handler, IShapeView shapeView) { }
 		public static void MapShape(IShapeViewHandler handler, IShapeView shapeView) { }

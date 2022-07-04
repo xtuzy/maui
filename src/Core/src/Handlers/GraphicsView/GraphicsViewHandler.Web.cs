@@ -2,9 +2,9 @@
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class GraphicsViewHandler : ViewHandler<IGraphicsView, object>
+	public partial class GraphicsViewHandler : ViewHandler<IGraphicsView, Microsoft.AspNetCore.Components.ComponentBase>
 	{
-		protected override object CreatePlatformView() => throw new NotImplementedException();
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView() => throw new NotImplementedException();
 
 		public static void MapDrawable(IGraphicsViewHandler handler, IGraphicsView graphicsView) { }
 		public static void MapFlowDirection(IGraphicsViewHandler handler, IGraphicsView graphicsView) { }

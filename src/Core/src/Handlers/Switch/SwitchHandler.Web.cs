@@ -2,9 +2,9 @@ using System;
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class SwitchHandler : ViewHandler<ISwitch, object>
+	public partial class SwitchHandler : ViewHandler<ISwitch, Microsoft.AspNetCore.Components.ComponentBase>
 	{
-		protected override object CreatePlatformView() => throw new NotImplementedException();
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView() => throw new NotImplementedException();
 
 		public static void MapIsOn(ISwitchHandler handler, ISwitch view) { }
 		public static void MapTrackColor(ISwitchHandler handler, ISwitch view) { }

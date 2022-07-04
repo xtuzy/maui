@@ -2,9 +2,9 @@ using System;
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class ButtonHandler : ViewHandler<IButton, object>
+	public partial class ButtonHandler : ViewHandler<IButton, Microsoft.AspNetCore.Components.ComponentBase>
 	{
-		protected override object CreatePlatformView() => throw new NotImplementedException();
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView() => throw new NotImplementedException();
 
 		public static void MapStrokeColor(IButtonHandler handler, IButtonStroke buttonStroke) { }
 		public static void MapStrokeThickness(IButtonHandler handler, IButtonStroke buttonStroke) { }

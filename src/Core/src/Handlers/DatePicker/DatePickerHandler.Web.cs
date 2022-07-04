@@ -2,9 +2,9 @@
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class DatePickerHandler : ViewHandler<IDatePicker, object>
+	public partial class DatePickerHandler : ViewHandler<IDatePicker, Microsoft.AspNetCore.Components.ComponentBase>
 	{
-		protected override object CreatePlatformView() => throw new NotImplementedException();
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView() => throw new NotImplementedException();
 
 		public static void MapFormat(IDatePickerHandler handler, IDatePicker datePicker) { }
 		public static void MapDate(IDatePickerHandler handler, IDatePicker datePicker) { }

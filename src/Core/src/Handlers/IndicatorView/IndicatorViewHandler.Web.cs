@@ -2,9 +2,9 @@
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class IndicatorViewHandler : ViewHandler<IIndicatorView, object>
+	public partial class IndicatorViewHandler : ViewHandler<IIndicatorView, Microsoft.AspNetCore.Components.ComponentBase>
 	{
-		protected override object CreatePlatformView() => throw new NotImplementedException();
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView() => throw new NotImplementedException();
 
 		public static void MapCount(IIndicatorViewHandler handler, IIndicatorView indicator) { }
 		public static void MapPosition(IIndicatorViewHandler handler, IIndicatorView indicator) { }

@@ -5,9 +5,9 @@ using Microsoft.Maui.Handlers;
 
 namespace Microsoft.Maui.Controls.Handlers.Items
 {
-	public abstract partial class ItemsViewHandler<TItemsView> : ViewHandler<TItemsView, object> where TItemsView : ItemsView
+	public abstract partial class ItemsViewHandler<TItemsView> : ViewHandler<TItemsView, Microsoft.AspNetCore.Components.ComponentBase> where TItemsView : ItemsView
 	{
-		protected override object CreatePlatformView()
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView()
 		{
 			throw new NotImplementedException();
 		}

@@ -2,9 +2,9 @@
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class RadioButtonHandler : ViewHandler<IRadioButton, object>
+	public partial class RadioButtonHandler : ViewHandler<IRadioButton, Microsoft.AspNetCore.Components.ComponentBase>
 	{
-		protected override object CreatePlatformView() => throw new NotImplementedException();
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView() => throw new NotImplementedException();
 
 		public static void MapBackground(IRadioButtonHandler handler, IRadioButton radioButton) { }
 		public static void MapIsChecked(IRadioButtonHandler handler, IRadioButton radioButton) { }

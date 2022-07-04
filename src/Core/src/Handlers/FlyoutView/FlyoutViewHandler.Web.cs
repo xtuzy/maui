@@ -2,9 +2,9 @@
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class FlyoutViewHandler : ViewHandler<IFlyoutView, object>
+	public partial class FlyoutViewHandler : ViewHandler<IFlyoutView, Microsoft.AspNetCore.Components.ComponentBase>
 	{
-		protected override object CreatePlatformView()
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView()
 		{
 			throw new System.NotImplementedException();
 		}

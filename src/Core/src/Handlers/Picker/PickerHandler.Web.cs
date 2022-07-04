@@ -2,9 +2,9 @@
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class PickerHandler : ViewHandler<IPicker, object>
+	public partial class PickerHandler : ViewHandler<IPicker, Microsoft.AspNetCore.Components.ComponentBase>
 	{
-		protected override object CreatePlatformView() => throw new NotImplementedException();
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView() => throw new NotImplementedException();
 
 		public static void MapReload(IPickerHandler handler, IPicker picker, object? args) { }
 		public static void MapTitle(IPickerHandler handler, IPicker view) { }

@@ -2,9 +2,9 @@
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class NavigationViewHandler : ViewHandler<IStackNavigationView, object>
+	public partial class NavigationViewHandler : ViewHandler<IStackNavigationView, Microsoft.AspNetCore.Components.ComponentBase>
 	{
-		protected override object CreatePlatformView()
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView()
 		{
 			throw new NotImplementedException();
 		}

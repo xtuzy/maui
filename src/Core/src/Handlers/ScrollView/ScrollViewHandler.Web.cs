@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class ScrollViewHandler : ViewHandler<IScrollView, object>
+	public partial class ScrollViewHandler : ViewHandler<IScrollView, Microsoft.AspNetCore.Components.ComponentBase>
 	{
-		protected override object CreatePlatformView() => throw new NotImplementedException();
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView() => throw new NotImplementedException();
 
 		public static void MapContent(IViewHandler handler, IScrollView scrollView) { }
 		public static void MapHorizontalScrollBarVisibility(IViewHandler handler, IScrollView scrollView) { }

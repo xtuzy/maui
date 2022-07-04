@@ -2,9 +2,9 @@
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class EntryHandler : ViewHandler<IEntry, object>
+	public partial class EntryHandler : ViewHandler<IEntry, Microsoft.AspNetCore.Components.ComponentBase>
 	{
-		protected override object CreatePlatformView() => throw new NotImplementedException();
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView() => throw new NotImplementedException();
 
 		public static void MapText(IEntryHandler handler, IEntry entry) { }
 		public static void MapTextColor(IEntryHandler handler, IEntry entry) { }

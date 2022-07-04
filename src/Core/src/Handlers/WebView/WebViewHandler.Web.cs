@@ -2,9 +2,9 @@
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class WebViewHandler : ViewHandler<IWebView, object>
+	public partial class WebViewHandler : ViewHandler<IWebView, Microsoft.AspNetCore.Components.ComponentBase>
 	{
-		protected override object CreatePlatformView() => throw new NotImplementedException();
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView() => throw new NotImplementedException();
 
 		public static void MapSource(IWebViewHandler handler, IWebView webView) { }
 

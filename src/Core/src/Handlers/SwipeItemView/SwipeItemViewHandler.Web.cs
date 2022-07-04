@@ -2,9 +2,9 @@
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class SwipeItemViewHandler : ViewHandler<ISwipeItemView, object>, ISwipeItemViewHandler
+	public partial class SwipeItemViewHandler : ViewHandler<ISwipeItemView, Microsoft.AspNetCore.Components.ComponentBase>, ISwipeItemViewHandler
 	{
-		protected override object CreatePlatformView()
+		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView()
 		{
 			throw new NotImplementedException();
 		}
