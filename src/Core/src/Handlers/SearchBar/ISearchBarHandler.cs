@@ -11,7 +11,9 @@ using QueryEditor = Microsoft.UI.Xaml.Controls.AutoSuggestBox;
 #elif TIZEN
 using PlatformView = Tizen.UIExtensions.ElmSharp.SearchBar;
 using QueryEditor = Tizen.UIExtensions.ElmSharp.EditfieldEntry;
-#elif (NETSTANDARD || !PLATFORM) || (NET6_0_OR_GREATER && !IOS && !ANDROID && !TIZEN)
+#elif WEB
+using PlatformView = Microsoft.AspNetCore.Components.ComponentBase;
+#elif (NETSTANDARD || !PLATFORM) || (NET6_0_OR_GREATER && !IOS && !ANDROID && !TIZEN && !WEB)
 using PlatformView = System.Object;
 using QueryEditor = System.Object;
 #endif

@@ -6,7 +6,9 @@ using PlatformView = AndroidX.AppCompat.Widget.AppCompatEditText;
 using PlatformView = Microsoft.UI.Xaml.Controls.TextBox;
 #elif TIZEN
 using PlatformView = Tizen.UIExtensions.ElmSharp.Entry;
-#elif (NETSTANDARD || !PLATFORM) || (NET6_0_OR_GREATER && !IOS && !ANDROID && !TIZEN)
+#elif WEB
+using PlatformView = Microsoft.AspNetCore.Components.ComponentBase;
+#elif (NETSTANDARD || !PLATFORM) || (NET6_0_OR_GREATER && !IOS && !ANDROID && !TIZEN && !WEB)
 using PlatformView = System.Object;
 #endif
 

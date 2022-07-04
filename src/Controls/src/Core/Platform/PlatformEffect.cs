@@ -7,6 +7,8 @@ using PlatformView = Android.Views.View;
 using PlatformView = Microsoft.UI.Xaml.FrameworkElement;
 #elif TIZEN
 using PlatformView = ElmSharp.EvasObject;
+#elif WEB
+using PlatformView = Microsoft.AspNetCore.Components.ComponentBase;
 #elif (NETSTANDARD || !PLATFORM)
 using PlatformView = System.Object;
 #endif

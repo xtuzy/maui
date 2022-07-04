@@ -20,7 +20,9 @@ using PlatformView = ElmSharp.EvasObject;
 using BasePlatformType = System.Object;
 using PlatformWindow = ElmSharp.Window;
 using PlatformApplication = Tizen.Applications.CoreUIApplication;
-#elif (NETSTANDARD || !PLATFORM) || (NET6_0_OR_GREATER && !IOS && !ANDROID && !TIZEN)
+#elif WEB
+using PlatformView = Microsoft.AspNetCore.Components.ComponentBase;
+#elif (NETSTANDARD || !PLATFORM) || (NET6_0_OR_GREATER && !IOS && !ANDROID && !TIZEN && !WEB)
 using PlatformView = System.Object;
 using BasePlatformType = System.Object;
 using IPlatformViewHandler = Microsoft.Maui.IViewHandler;

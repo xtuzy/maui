@@ -9,6 +9,8 @@ using PlatformView = Android.App.Activity;
 using PlatformView = Microsoft.UI.Xaml.Window;
 #elif TIZEN
 using PlatformView = ElmSharp.Window;
+#elif WEB
+using PlatformView = Microsoft.AspNetCore.Components.ComponentBase;
 #endif
 
 namespace Microsoft.Maui

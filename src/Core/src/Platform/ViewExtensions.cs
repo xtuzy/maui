@@ -20,6 +20,9 @@ using ParentView = Microsoft.UI.Xaml.DependencyObject;
 #elif TIZEN
 using PlatformView = ElmSharp.EvasObject;
 using ParentView = ElmSharp.EvasObject;
+#elif WEB
+using PlatformView = Microsoft.AspNetCore.Components.ComponentBase;
+using ParentView = Microsoft.AspNetCore.Components.ComponentBase;
 #else
 using PlatformView = System.Object;
 using ParentView = System.Object;

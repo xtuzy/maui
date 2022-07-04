@@ -31,6 +31,7 @@
     <MicrosoftAspNetCoreComponentsPackageVersion>6.0.5</MicrosoftAspNetCoreComponentsPackageVersion>
     <MicrosoftAspNetCoreComponentsWebPackageVersion>6.0.6</MicrosoftAspNetCoreComponentsWebPackageVersion>
     <MicrosoftAspNetCoreComponentsWebViewPackageVersion>6.0.6</MicrosoftAspNetCoreComponentsWebViewPackageVersion>
+    <MicrosoftAspNetCoreComponentsPackageVersion>6.0.6</MicrosoftAspNetCoreComponentsPackageVersion>
     <MicrosoftAspNetCoreMetadataPackageVersion>6.0.5</MicrosoftAspNetCoreMetadataPackageVersion>
     <MicrosoftJSInteropPackageVersion>6.0.6</MicrosoftJSInteropPackageVersion>
     <!-- Other packages -->

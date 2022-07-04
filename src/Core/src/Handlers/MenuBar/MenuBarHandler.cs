@@ -9,7 +9,9 @@ using PlatformView = Android.Views.View;
 using PlatformView = Microsoft.UI.Xaml.Controls.MenuBar;
 #elif TIZEN
 using PlatformView = ElmSharp.EvasObject;
-#elif (NETSTANDARD || !PLATFORM) || (NET6_0_OR_GREATER && !IOS && !ANDROID && !TIZEN)
+#elif WEB
+using PlatformView = Microsoft.AspNetCore.Components.ComponentBase;
+#elif (NETSTANDARD || !PLATFORM) || (NET6_0_OR_GREATER && !IOS && !ANDROID && !TIZEN && !WEB)
 using PlatformView = System.Object;
 #endif
 

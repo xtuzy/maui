@@ -6,7 +6,9 @@ using PlatformView = Microsoft.Maui.Platform.MauiShapeView;
 using PlatformView = Microsoft.Maui.Graphics.Win2D.W2DGraphicsView;
 #elif TIZEN
 using PlatformView = Microsoft.Maui.Platform.MauiShapeView;
-#elif (NETSTANDARD || !PLATFORM) || (NET6_0_OR_GREATER && !IOS && !ANDROID && !TIZEN)
+#elif WEB
+using PlatformView = Microsoft.AspNetCore.Components.ComponentBase;
+#elif (NETSTANDARD || !PLATFORM) || (NET6_0_OR_GREATER && !IOS && !ANDROID && !TIZEN && !WEB)
 using PlatformView = System.Object;
 #endif
 
