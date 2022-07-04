@@ -13,6 +13,7 @@ using PlatformView = Tizen.UIExtensions.ElmSharp.SearchBar;
 using QueryEditor = Tizen.UIExtensions.ElmSharp.EditfieldEntry;
 #elif WEB
 using PlatformView = Microsoft.AspNetCore.Components.ComponentBase;
+using QueryEditor = Microsoft.AspNetCore.Components.ComponentBase;
 #elif (NETSTANDARD || !PLATFORM) || (NET6_0_OR_GREATER && !IOS && !ANDROID && !TIZEN && !WEB)
 using PlatformView = System.Object;
 using QueryEditor = System.Object;

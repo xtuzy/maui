@@ -2,7 +2,7 @@
 {
 	public partial class WindowOverlay
 	{
-		object? _graphicsView = null;
+		Microsoft.AspNetCore.Components.ComponentBase? _graphicsView = null;
 
 		/// <inheritdoc/>
 		public void Invalidate()

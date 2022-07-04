@@ -15,6 +15,10 @@ using PlatformView = Microsoft.UI.Xaml.Controls.Button;
 using PlatformImage = Tizen.UIExtensions.ElmSharp.Image;
 using PlatformImageView = Tizen.UIExtensions.ElmSharp.Image;
 using PlatformView = Microsoft.Maui.Platform.MauiImageButton;
+#elif WEB
+using PlatformImage = Microsoft.AspNetCore.Components.ComponentBase;
+using PlatformImageView = Microsoft.AspNetCore.Components.ComponentBase;
+using PlatformView = Microsoft.AspNetCore.Components.ComponentBase;
 #elif (NETSTANDARD || !PLATFORM) || (NET6_0_OR_GREATER && !IOS && !ANDROID && !TIZEN && !WEB)
 using PlatformImage = System.Object;
 using PlatformImageView = System.Object;

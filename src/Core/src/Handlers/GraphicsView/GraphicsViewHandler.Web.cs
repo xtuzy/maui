@@ -1,10 +1,11 @@
 ﻿using System;
+using Microsoft.Maui.Platform;
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class GraphicsViewHandler : ViewHandler<IGraphicsView, Microsoft.AspNetCore.Components.ComponentBase>
+	public partial class GraphicsViewHandler : ViewHandler<IGraphicsView, PlatformTouchGraphicsView>
 	{
-		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView() => throw new NotImplementedException();
+		protected override PlatformTouchGraphicsView CreatePlatformView() => throw new NotImplementedException();
 
 		public static void MapDrawable(IGraphicsViewHandler handler, IGraphicsView graphicsView) { }
 		public static void MapFlowDirection(IGraphicsViewHandler handler, IGraphicsView graphicsView) { }

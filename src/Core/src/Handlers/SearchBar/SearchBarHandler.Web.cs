@@ -6,7 +6,7 @@ namespace Microsoft.Maui.Handlers
 	{
 		protected override Microsoft.AspNetCore.Components.ComponentBase CreatePlatformView() => throw new NotImplementedException();
 
-		public object? QueryEditor => throw new NotImplementedException();
+		public Microsoft.AspNetCore.Components.ComponentBase? QueryEditor => throw new NotImplementedException();
 
 		public static void MapBackground(ISearchBarHandler handler, ISearchBar searchBar) { }
 		public static void MapIsEnabled(ISearchBarHandler handler, ISearchBar searchBar) { }
