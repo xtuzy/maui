@@ -102,7 +102,7 @@
     <DefineConstants>$(DefineConstants);WEB</DefineConstants>
   </PropertyGroup>
   <ItemGroup Condition=" '$(_MauiTargetPlatformIsWeb)' == 'True' ">
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="$(MicrosoftAspNetCoreComponentsPackageVersion)" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" />
   </ItemGroup>
 
   <!-- iOS -->

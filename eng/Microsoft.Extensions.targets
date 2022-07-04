@@ -86,6 +86,10 @@
         Version="$(MicrosoftAspNetCoreAuthorizationPackageVersion)"
     />
     <PackageReference
+        Update="Microsoft.AspNetCore.Components"
+        Version="$(MicrosoftAspNetCoreComponentsPackageVersion)"
+    />
+    <PackageReference
         Update="Microsoft.AspNetCore.Components.WebView"
         Version="$(MicrosoftAspNetCoreComponentsWebViewPackageVersion)"
     />

@@ -12,6 +12,8 @@ using PlatformImage = Android.Graphics.Drawables.Drawable;
 using PlatformImage = Microsoft.UI.Xaml.Media.ImageSource;
 #elif TIZEN
 using PlatformImage = Tizen.UIExtensions.ElmSharp.Image;
+#elif WEB
+using PlatformImage = Microsoft.AspNetCore.Components.ComponentBase;
 #elif (NETSTANDARD || !PLATFORM) || (NET6_0_OR_GREATER && !IOS && !ANDROID && !TIZEN && !WEB)
 using PlatformImage = System.Object;
 #endif
