@@ -29,6 +29,12 @@
     <Compile Remove="**\Android\**\*.cs" />
     <None Include="**\Android\**\*.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
   </ItemGroup>
+  <ItemGroup Condition=" '$(_MauiTargetPlatformIsWeb)' != 'True' ">
+    <Compile Remove="**\**\*.Web.cs" />
+    <None Include="**\**\*.Web.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+    <Compile Remove="**\Web\**\*.cs" />
+    <None Include="**\Web\**\*.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+  </ItemGroup>
   <ItemGroup Condition="'$(_MauiNoTargetPlatform)' != 'True'">
     <Compile Remove="**\*.Standard.cs" />
     <None Include="**\*.Standard.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
@@ -90,6 +96,11 @@
     <AndroidResource Include="$(MonoAndroidResourcePrefix)\*\*.xml" />
     <AndroidResource Include="$(MonoAndroidResourcePrefix)\*\*.axml" />
   </ItemGroup>
+
+  <!-- Web -->
+  <PropertyGroup Condition=" '$(_MauiTargetPlatformIsWeb)' == 'True' ">
+    <DefineConstants>$(DefineConstants);WEB</DefineConstants>
+  </PropertyGroup>
 
   <!-- iOS -->
   <PropertyGroup Condition=" '$(_MauiTargetPlatformIsiOS)' == 'True' ">
