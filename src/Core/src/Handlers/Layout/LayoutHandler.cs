@@ -8,7 +8,7 @@ using PlatformView = Microsoft.Maui.Platform.LayoutPanel;
 #elif TIZEN
 using PlatformView = Microsoft.Maui.Platform.LayoutCanvas;
 #elif WEB
-using PlatformView = Microsoft.AspNetCore.Components.ComponentBase;
+using PlatformView = Microsoft.Maui.Platform.LayoutView;
 #elif (NETSTANDARD || !PLATFORM)
 using PlatformView = System.Object;
 #endif
