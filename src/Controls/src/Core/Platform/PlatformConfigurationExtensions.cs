@@ -6,6 +6,8 @@ using CurrentPlatform = Microsoft.Maui.Controls.PlatformConfiguration.Android;
 using CurrentPlatform = Microsoft.Maui.Controls.PlatformConfiguration.Windows;
 #elif TIZEN
 using CurrentPlatform = Microsoft.Maui.Controls.PlatformConfiguration.Tizen;
+#elif WEB
+using CurrentPlatform = Microsoft.Maui.Controls.PlatformConfiguration.Web;
 #elif (NETSTANDARD || !PLATFORM)
 using PlatformView = System.Object;
 #endif

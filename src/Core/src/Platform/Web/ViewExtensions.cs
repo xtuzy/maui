@@ -95,5 +95,7 @@ namespace Microsoft.Maui.Platform
 		{
 			throw new NotImplementedException();
 		}
+
+		internal static bool IsLoaded(this PlatformView uiView) => true;
 	}
 }

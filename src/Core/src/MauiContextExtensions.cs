@@ -17,6 +17,9 @@ using NativeWindow = Android.App.Activity;
 #elif TIZEN
 using NativeApplication = Tizen.Applications.CoreApplication;
 using NativeWindow =  ElmSharp.Window;
+#elif WEB
+using NativeApplication = System.Object;
+using NativeWindow = Microsoft.AspNetCore.Components.ComponentBase;
 #else
 using NativeApplication = System.Object;
 using NativeWindow = System.Object;
