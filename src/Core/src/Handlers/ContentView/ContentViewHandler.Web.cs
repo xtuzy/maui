@@ -3,8 +3,9 @@ using Microsoft.AspNetCore.Components;
 
 namespace Microsoft.Maui.Handlers
 {
-	public partial class ContentViewHandler : ViewHandler<IContentView, ContentView>
+	public partial class ContentViewHandler : ViewHandler<IContentView, ContentView>, IHasPlatformViewType
 	{
+		public Type PlatformViewType => typeof(ContentView);
 		protected override ContentView CreatePlatformView()
 		{
 			_ = VirtualView ?? throw new InvalidOperationException($"{nameof(VirtualView)} must be set to create a {nameof(ContentView)}");
@@ -35,19 +36,11 @@ namespace Microsoft.Maui.Handlers
 			_ = handler.MauiContext ?? throw new InvalidOperationException($"{nameof(MauiContext)} should have been set by base class.");
 
 			if (handler.VirtualView.PresentedContent is IView view) {
-				if (view.ToPlatform(handler.MauiContext) is ComponentBase platformComponent) {
-					handler.PlatformView.SetContent(platformComponent);
-				}
+				handler.PlatformView.SetContent(view, handler.MauiContext);
 			}
 			else {
 				handler.PlatformView.ClearContent();
 			}
-
-			// Cleanup the old view when reused
-			// handler.PlatformView.ClearSubviews();
-
-			// if (handler.VirtualView.PresentedContent is IView view)
-			// 	handler.PlatformView.AddSubview(view.ToPlatform(handler.MauiContext));
 		}
 
 		public static void MapContent(IContentViewHandler handler, IContentView page)
@@ -55,4 +48,10 @@ namespace Microsoft.Maui.Handlers
 			UpdateContent(handler);
 		}
 	}
+
+	public interface IHasPlatformViewType
+	{
+		Type PlatformViewType { get; }
+	}
 }
+
