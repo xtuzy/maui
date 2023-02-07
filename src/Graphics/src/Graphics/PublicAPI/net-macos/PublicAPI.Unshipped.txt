@@ -502,7 +502,7 @@ Microsoft.Maui.Graphics.Platform.PlatformCanvasStateService.PlatformCanvasStateS
 Microsoft.Maui.Graphics.Platform.PlatformGraphicsView
 Microsoft.Maui.Graphics.Platform.PlatformGraphicsView.InvalidateDrawable() -> void
 Microsoft.Maui.Graphics.Platform.PlatformGraphicsView.InvalidateDrawable(float x, float y, float w, float h) -> void
-Microsoft.Maui.Graphics.Platform.PlatformGraphicsView.PlatformGraphicsView(nint handle) -> void
+Microsoft.Maui.Graphics.Platform.PlatformGraphicsView.PlatformGraphicsView(System.IntPtr handle) -> void
 Microsoft.Maui.Graphics.Platform.PlatformImage
 Microsoft.Maui.Graphics.Platform.PlatformImage.Dispose() -> void
 Microsoft.Maui.Graphics.Platform.PlatformImage.Height.get -> float
@@ -969,8 +969,11 @@ virtual Microsoft.Maui.Graphics.Platform.PlatformGraphicsView.PatternPhase.get -
 ~Microsoft.Maui.Graphics.Color.WithLuminosity(float luminosity) -> Microsoft.Maui.Graphics.Color
 ~Microsoft.Maui.Graphics.Color.WithSaturation(float saturation) -> Microsoft.Maui.Graphics.Color
 ~Microsoft.Maui.Graphics.Font.Equals(Microsoft.Maui.Graphics.IFont other) -> bool
+~Microsoft.Maui.Graphics.Font.Font(CoreGraphics.CGFont platformFont, Microsoft.Maui.Graphics.FontStyleType styleType, int weight = 400) -> void
 ~Microsoft.Maui.Graphics.Font.Font(string name, int weight = 400, Microsoft.Maui.Graphics.FontStyleType styleType = Microsoft.Maui.Graphics.FontStyleType.Normal) -> void
 ~Microsoft.Maui.Graphics.Font.Name.get -> string
+~Microsoft.Maui.Graphics.Font.PlatformFont.get -> CoreGraphics.CGFont
+~Microsoft.Maui.Graphics.Font.PlatformFont.set -> void
 ~Microsoft.Maui.Graphics.GradientPaint.AddOffset(float offset, Microsoft.Maui.Graphics.Color color) -> void
 ~Microsoft.Maui.Graphics.GradientPaint.BlendStartAndEndColors() -> Microsoft.Maui.Graphics.Color
 ~Microsoft.Maui.Graphics.GradientPaint.BlendStartAndEndColors(Microsoft.Maui.Graphics.Color startColor, Microsoft.Maui.Graphics.Color endColor, float factor) -> Microsoft.Maui.Graphics.Color
@@ -1006,6 +1009,7 @@ virtual Microsoft.Maui.Graphics.Platform.PlatformGraphicsView.PatternPhase.get -
 ~Microsoft.Maui.Graphics.ICanvasStateService<TState>.CreateNew(object context) -> TState
 ~Microsoft.Maui.Graphics.IDrawable.Draw(Microsoft.Maui.Graphics.ICanvas canvas, Microsoft.Maui.Graphics.RectF dirtyRect) -> void
 ~Microsoft.Maui.Graphics.IFont.Name.get -> string
+~Microsoft.Maui.Graphics.IFont.PlatformFont.get -> CoreGraphics.CGFont
 ~Microsoft.Maui.Graphics.IImage.Downsize(float maxWidth, float maxHeight, bool disposeOriginal = false) -> Microsoft.Maui.Graphics.IImage
 ~Microsoft.Maui.Graphics.IImage.Downsize(float maxWidthOrHeight, bool disposeOriginal = false) -> Microsoft.Maui.Graphics.IImage
 ~Microsoft.Maui.Graphics.IImage.Resize(float width, float height, Microsoft.Maui.Graphics.ResizeMode resizeMode = Microsoft.Maui.Graphics.ResizeMode.Fit, bool disposeOriginal = false) -> Microsoft.Maui.Graphics.IImage

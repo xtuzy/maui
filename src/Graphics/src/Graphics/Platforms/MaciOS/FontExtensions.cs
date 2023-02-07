@@ -15,12 +15,12 @@ namespace Microsoft.Maui.Graphics.Platform
 		public static CGFont ToCGFont(this IFont font)
 			=> string.IsNullOrEmpty(font?.Name)
 				? GetDefaultCGFont()
-				: CGFont.CreateWithFontName(font.Name);
+				: font.PlatformFont != null? font.PlatformFont : CGFont.CreateWithFontName(font.Name);
 
 		public static CTFont ToCTFont(this IFont font, nfloat? size = null)
 			=> string.IsNullOrEmpty(font?.Name)
 				? GetDefaultCTFont(size)
-				: new CTFont(font.Name, size ?? PlatformFont.SystemFontSize, CTFontOptions.Default);
+				: font.PlatformFont != null? font.PlatformFont.ToCTFont(size ?? PlatformFont.SystemFontSize) : new CTFont(font.Name, size ?? PlatformFont.SystemFontSize, CTFontOptions.Default);
 
 		public static PlatformFont ToPlatformFont(this IFont font, nfloat? size = null)
 			=>

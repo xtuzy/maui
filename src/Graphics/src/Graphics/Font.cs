@@ -39,7 +39,16 @@ namespace Microsoft.Maui.Graphics
 			Weight = weight;
 			StyleType = styleType;
 		}
-
+#if IOS || MACCATALYST || MACOS
+		public Font(CoreGraphics.CGFont platformFont, FontStyleType styleType, int weight = FontWeights.Normal)
+		{
+			PlatformFont = platformFont;
+			Name = platformFont.FullName;
+			Weight = weight;
+			StyleType = styleType;
+		}
+		public CoreGraphics.CGFont PlatformFont { get; set; }
+#endif
 		public string Name { get; private set; }
 		public int Weight { get; private set; }
 		public FontStyleType StyleType { get; private set; }
