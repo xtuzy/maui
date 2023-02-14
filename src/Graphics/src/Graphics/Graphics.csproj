@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <!-- TargetFrameworks>netstandard2.1;netstandard2.0;$(_MauiDotNetTfm);$(MauiGraphicsPlatforms);</TargetFrameworks-->
-    <TargetFrameworks>net6.0-ios;net6.0-maccatalyst;net6.0-macos</TargetFrameworks>
+    <TargetFrameworks>net6.0-ios11.0;net6.0-maccatalyst13.1;net6.0-macos10.15</TargetFrameworks>
     <!-- Optional: Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <!-- Optional: Build symbol package (.snupkg) to distribute the PDB containing Source Link -->
